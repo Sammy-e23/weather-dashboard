@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="app-title">
+                <i class="fas fa-cloud-sun"></i>
+                Weather Dashboard
+            </h1>
+            <p class="app-subtitle">Real-time weather updates for cities worldwide</p>
+        </div>
+    </header>
+
+    <!-- Search -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    class="search-input" 
+                    placeholder="Search for a city..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i>
+                    Search
+                </button>
+                <button id="locationBtn" class="location-btn" title="Use my location">
+                    <i class="fas fa-location-crosshairs"></i>
+                </button>
+            </div>
+            <div id="searchSuggestions" class="search-suggestions"></div>
+        </div>
+    </section>
+
+    <!-- Current Weather Section -->
+    <section class="current-weather-section">
+        <div class="container">
+            <div id="currentWeather" class="current-weather-card">
+                <!-- Current weather will be displayed here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-Day Forecast Section -->
+    <section class="forecast-section">
+        <div class="container">
+            <h2 class="section-title">3-Day Forecast</h2>
+            <div id="forecastContainer" class="forecast-container">
+                <!-- Forecast cards will be displayed here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Searches Section -->
+    <section class="recent-section">
+        <div class="container">
+            <h2 class="section-title">Recent Searches</h2>
+            <div id="recentCities" class="recent-cities">
+                <!-- Recent city cards will be displayed here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Fetching weather data...</p>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="error-modal">
+        <div class="error-content">
+            <i class="fas fa-exclamation-circle"></i>
+            <h3>Oops!</h3>
+            <p id="errorMessage"></p>
+            <button id="closeError" class="close-error-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Powered by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap API</a></p>
+            <p>&copy; 2025 Weather Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
