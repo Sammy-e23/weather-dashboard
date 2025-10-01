@@ -6,7 +6,6 @@ A real-time weather dashboard that displays current weather conditions and 3-day
 
 - **Real-Time Weather Data** - Live weather information from OpenWeatherMap API
 - **City Search** - Search for any city worldwide
-- **Autocomplete Suggestions** - Popular cities suggestions while typing
 - **Geolocation Support** - Automatically fetch weather for your current location
 - **3-Day Forecast** - View upcoming weather predictions
 - **Detailed Information** - Temperature, humidity, wind speed, pressure, visibility, and cloudiness
